@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="global.css">
+  <title>Gallery</title>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="img/logo.jpg" alt="logo" width="170" height="100">
+    </a>
+    <img src="img/banner_logo.jpg" alt="banner logo" width="500" height="270">
+    
+    <nav>
+      <ul>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="cinematography.html">Cinematography</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Gallery</h1>
+    <p>Dont have time to implement this yet. Will do so in HW3!</p>
+    <h2>Experimental Section to testing the rest of tags:</h2>
+    <p>This paragraph is to test out the spcial <code>code</code> tag.</p>
+    <p>This is test audio clip:</p>
+    <audio controls>
+      <source src="audio/test_audio.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+    <br />
+    <canvas id="canvas" width="300" height="300" style="border:1px solid black;">
+      <script>
+        var can = document.getElementById("canvas");
+        var draw = can.getContext("2d");
+        draw.beginPath();
+        draw.arc(150, 150, 100, 0, 2*Math.PI);
+        draw.stroke();
+        </script> 
+    </canvas>
+    <br/>
+    <p>This is an example for auto complete inpute:</p>
+    <label for="fruit_input">What is your favorate fruit:</label>
+    <input list="fruit" name="fruit" id="fruit_input">
+    <datalist id="fruit">
+      <option value="Apple">
+      <option value="Oranges">
+      <option value="Banana">
+    </datalist>
+    <br/>
+    <p>This is an example of contents hidden from being rendered:</p>
+    <template>
+      <p>I am hidden T_T</p>
+    </template>
+
+  </main>
+  
+  <footer>
+    <hr/>
+    <p>Sky Li &copy; 2022</p>
+  </footer>
+</body>
+</html>
