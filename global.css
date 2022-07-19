@@ -236,7 +236,7 @@ nav a {
     position: absolute;
     top: 3.3rem;
     right: 0; 
-    background-color: #a3c0e6b9;
+    background-color: #a3c0e6d0;
     text-align: center;
     border-radius: 1em;
   }
@@ -276,7 +276,7 @@ nav a {
   color: white;
   position: absolute;
   z-index: 10;
-  top: 40%;
+  top: 20%;
   right: 0;
   left: 0;
   text-align: center;
