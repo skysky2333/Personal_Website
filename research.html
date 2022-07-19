@@ -9,65 +9,87 @@
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <img src="img/logo.jpg" alt="logo" width="170" height="100">
-    </a>
-    <img src="img/banner_logo.jpg" alt="banner logo" width="500" height="270">
-    
     <nav>
-      <ul>
-        <li><a href="background.html">Background</a></li>
-        <li><a href="research.html">Research</a></li>
+      
+      <a id ='logo' href="index.html">
+        Sky Li - Portfolio
+      </a>
+      
+      <label class="menu" for="toggle">   
+        <a> MENU </a>
+      </label>
+      <input type="checkbox" id="toggle">
+      
+      
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="current"><a href="research.html">Research</a></li>
         <li><a href="cinematography.html">Cinematography</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="background.html">About</a></li>
+        <!--
+          <li><a href="gallery.html">Gallery</a></li>
+        -->
       </ul>
     </nav>
   </header>
   
-  <main>
-    <h1>Research</h1>
-    <h2>Research Experiences:</h2>
-    <h3>Ongkeko Lab, <em>Researcher</em></h3>
-    <ul>
-      <li>
-        Conduct a systematic meta-analysis from 68 studies on <b>Covid-19 outcome disparity</b> based on <b>racial and socioeconomic factors</b>. Personal contribution includes acquiring, cataloging and data extraction from 21,745 papers in academic databases, creating and executing R programs for Risk Ratio, multi-variable regression analysis
-      </li>
-      <li>
-        Align microbial reads on tumor tissue sequencing from Head and<b> Neck Squamous Cell Carcinoma (HNSCC) and Non-Small Cell Lung Cancer (NSCLC)</b> patients using Pathoscope; perform downstream analysis including Kruskal Wallis differential expression, Kaplan Meier survival and Gene Set Enrichment Analysis (GSEA) to discover potential correlational mechanism on pathways and mutations      
-      </li>
-      <li>
-        Train, fine-tune and test Light Gradient Boosting Machine (LGBM) machine learning algorithm on<b> circular RNA expression </b>for HNSCC diagnosis and prognosis prediction
-      </li>
-    </ul>
-    <h3>CTEPH Nuclear Medical Image Analysis, <em>Researcher</em></h3>
-    <ul>
-      <li>
-        Collaborated with 5 team members at the First Affiliated Hospital of Guangzhou Medical University under
-        the leadership of a nuclear medical imaging specialist and a data scientist to construct and analyzes <b>3D imaging of computed tomography (CT) and single-photon emission computed tomography (SPECT)</b> to achieve
-        <details>
-          <summary>the following objectives:</summary>
-          <ul>
-            <li>Quantify pulmonary blood volume (PBV) by developing a visual scoring system</li>
-            <li>Diagnose chronic thromboembolic pulmonary hypertension (CTEPH)</li>
-            <li>Assess the effectiveness of balloon pulmonary angioplasty (BPA) as treatment</li>
-          </ul>
-        </details>
-        
-      </li>
-      <li>
-        Deliver the following
-        <details>
-          <summary>individual contributions:</summary>
-          <ul>
-            <li>Set up environment in cloud server, implement core-code into program and batch process the scans</li>
-            <li>Create an interactive user interface for easy execution and automatically format results into a human-
-              readable report</li>
+  <main class="fade_in">
+    <section id='experience'>
+      <h2>Research</h2>
+      <h3>Research Experiences</h3>
+      <div class="conenct_border" style="border-bottom: 10rem rgb(162, 203, 226) solid;">
+        <div class="hori_2">
+          <h3>Ongkeko Lab, <em>Researcher</em></h3>
+          <details>
+            <summary>Details</summary>
+            <ul>
+              <li>
+                Conduct a systematic meta-analysis from 68 studies on Covid-19 outcome disparity based on racial and socioeconomic factors. Personal contribution includes acquiring, cataloging and data extraction from 21,745 papers in academic databases, creating and executing R programs for Risk Ratio, multi-variable regression analysis
+              </li>
+              <li>
+                Align microbial reads on tumor tissue sequencing from Head and Neck Squamous Cell Carcinoma (HNSCC) and Non-Small Cell Lung Cancer (NSCLC) patients using Pathoscope; perform downstream analysis including Kruskal Wallis differential expression, Kaplan Meier survival and Gene Set Enrichment Analysis (GSEA) to discover potential correlational mechanism on pathways and mutations      
+              </li>
+              <li>
+                Train, fine-tune and test Light Gradient Boosting Machine (LGBM) machine learning algorithm on circular RNA expression for HNSCC diagnosis and prognosis prediction
+              </li>
             </ul>
           </details>
-          
-        </li>
-      </ul>
-      <h2>Publications:</h2>
+        </div>
+      </div>
+      <section class="dark_bg conenct_border" style="border-top: 10rem rgb(162, 203, 226) solid;">
+        <div class="hori_2">
+          <h3>CTEPH Nuclear Medical Image Analysis, <em>Researcher</em></h3>
+          <details>
+            <summary>Details</summary>
+            <ul>
+              <li>
+                Collaborated with 5 team members at the First Affiliated Hospital of Guangzhou Medical University under
+                the leadership of a nuclear medical imaging specialist and a data scientist to construct and analyzes 3D imaging of computed tomography (CT) and single-photon emission computed tomography (SPECT) to achieve
+                <details>
+                  <summary>Following objectives:</summary>
+                  <ul>
+                    <li>Quantify pulmonary blood volume (PBV) by developing a visual scoring system</li>
+                    <li>Diagnose chronic thromboembolic pulmonary hypertension (CTEPH)</li>
+                    <li>Assess the effectiveness of balloon pulmonary angioplasty (BPA) as treatment</li>
+                  </ul>
+                </details>
+                <details>
+                  <summary>Individual contributions:</summary>
+                  <ul>
+                    <li>Set up environment in cloud server, implement core-code into program and batch process the scans</li>
+                    <li>Create an interactive user interface for easy execution and automatically format results into a human-readable report</li>
+                  </ul>
+                </details>
+                
+              </li>
+            </ul>
+          </details>
+        </div>
+      </section>
+    </section>
+    
+    <section id="publications" class="space">
+      <h3>Publications</h3>
       <ol>
         <li>
           Magesh S, John D, Li WT, <b>Li Y</b>, Mattingly-app A, Jain S, Chang EY, Ongkeko WM. Disparities in COVID- 19 Outcomes by Race, Ethnicity, and Socioeconomic Status: A Systematic-Review and Meta-analysis. JAMA Netw Open. 2021;4(11):e2134147. doi:10.1001/jamanetworkopen.2021.34147
@@ -76,11 +98,11 @@
           Hou P, Lin S, Wang M, Chen P, Yi J, <b>Li Y</b>, Huang D, Lin J, Lin F, Guo W, Xie C, Hong C, Wang X. (2021). Correlation analysis of perfused lung volumes and visual scores using perfusion SPECT/CT and hemodynamic parameters in patients with chronic thromboembolic pulmonary hypertension. Chinese Journal of Nuclear Medicine and Molecular Imaging, 82-87.
         </li>
       </ol>
-    </main>
-    
-    <footer>
-      <hr/>
-      <p>Sky Li &copy; 2022</p>
-    </footer>
-  </body>
-  </html>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Sky Li &copy; 2022. No template used in creating this site!</p>
+  </footer>
+</body>
+</html>

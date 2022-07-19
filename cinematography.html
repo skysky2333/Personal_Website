@@ -5,99 +5,113 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="global.css">
-  <title>Cinemtography</title>
+  <title>Cinematography</title>
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <img src="img/logo.jpg" alt="logo" width="170" height="100">
-    </a>
-    <img src="img/banner_logo.jpg" alt="banner logo" width="500" height="270">
-    
     <nav>
-      <ul>
-        <li><a href="background.html">Background</a></li>
+      
+      <a id ='logo' href="index.html">
+        Sky Li - Portfolio
+      </a>
+      
+      <label class="menu" for="toggle">   
+        <a> MENU </a>
+      </label>
+      <input type="checkbox" id="toggle">
+      
+      
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a href="cinematography.html">Cinematography</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li class="current"><a href="cinematography.html">Cinematography</a></li>
+        <li><a href="background.html">About</a></li>
+        <!--
+          <li><a href="gallery.html">Gallery</a></li>
+        -->
       </ul>
     </nav>
   </header>
   
-  <main>
-<h1>Cinemtography</h1>
-<div>
-<h2>List of my works:</h2>
-<table>
-  <caption>Work by Sky Li ordered by years</caption>
-  <colgroup>
-    <col span="5" style="background-color:yellow">
-  </colgroup>
-  <tr>
-    <th>Name</th>
-    <th>My Roles</th>
-    <th>Year Published</th>
-    <th>Viewing Link</th>
-    <th>Award(s)</th>
-  </tr>
-  <tr>
-    <td>FBLA China Promo</td>
-    <td>Editor, VFX</td>
-    <td>2019</td>
-    <td><a href="https://youtu.be/g9mdWU95W_c">Youtube</a></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>NCPA graduation ceremony</td>
-    <td>Creator, Cinematographer</td>
-    <td>2019</td>
-    <td><a href="https://youtu.be/pz_bjKOexSU">Youtube</a></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>Fish</td>
-    <td>Cinematographer, editor, color grading, sound design</td>
-    <td>2021</td>
-    <td><a href="https://youtu.be/g9mdWU95W_c">Youtube</a></td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>A Reminiscent Gift</td>
-    <td>Cinematography</td>
-    <td>2022</td>
-    <td><a href="https://www.imdb.com/title/tt16954484">IMDB</a></td>
-    <td>Vinice Short Film Award, Independent Shorts Award</td>
-  </tr>
-  <tr>
-    <td>Lure</td>
-    <td>Lighting specialist</td>
-    <td>2022*</td>
-    <td>In production</td>
-    <td>N/A</td>
-  </tr>
-</table>
-</div>
-<div>
-<h2>
-  Trailer of the latest film: Lure (1080P)
-</h2>
-<video width="1920" height="1080" controls>
-  <source src="video/Lure-vimeo-707226230-dash-fastly_skyfire_sep-video-54e97b3b+dash-fastly_skyfire_sep-audio-807d9849.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video> 
-</div>
-<h1>Photography</h1>
-<h2>Check out my photo work:</h2>
-<iframe src=
-"https://drive.google.com/embeddedfolderview?id=1X1JKvXHRJaRxVNYlUKNOV8OWyK3MZ78b#grid"
-            height="400"
-            width="1000">
-</iframe>
-    </main>
-    
-    <footer>
-      <hr/>
-      <p>Sky Li &copy; 2022</p>
-    </footer>
-  </body>
-  </html>
+  <main class="fade_in">
+    <h2>Cinematography</h2>
+    <h3>List of my works:</h3>
+    <section id='table_wrap' class="shadow">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>My Roles</th>
+            <th>Year</th>
+            <th>Link</th>
+            <th>Award(s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FBLA China Promo</td>
+            <td>Editor, VFX</td>
+            <td>2019</td>
+            <td><a href="https://youtu.be/g9mdWU95W_c">Youtube</a></td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>NCPA graduation ceremony</td>
+            <td>Creator, Cinematographer</td>
+            <td>2019</td>
+            <td><a href="https://youtu.be/pz_bjKOexSU">Youtube</a></td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>Fish</td>
+            <td>Cinematographer, editor, color grading, sound design</td>
+            <td>2021</td>
+            <td><a href="https://youtu.be/g9mdWU95W_c">Youtube</a></td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>A Reminiscent Gift</td>
+            <td>Cinematography</td>
+            <td>2022</td>
+            <td><a href="https://www.imdb.com/title/tt16954484">IMDB</a></td>
+            <td>Vinice Short Film Award, Independent Shorts Award</td>
+          </tr>
+          <tr>
+            <td>Lure</td>
+            <td>Lighting specialist</td>
+            <td>2022*</td>
+            <td>In production</td>
+            <td>N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="dark_bg" style="padding:8rem 0rem;">
+      <h3 >
+        Trailer of the latest film: Lure (1080P)
+      </h3>
+      <div id = "vid_wrap">
+        <video class='shadow' width="1920" height="1080" controls>
+          <source src="video/Lure-vimeo-707226230-dash-fastly_skyfire_sep-video-54e97b3b+dash-fastly_skyfire_sep-audio-807d9849.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+    <section id='iframe'>
+      <h2 style="margin-top:10rem;">Photography</h2>
+      <div class='shadow' id = "photo_wrap">
+        <iframe src=
+        "https://drive.google.com/embeddedfolderview?id=1X1JKvXHRJaRxVNYlUKNOV8OWyK3MZ78b#grid"
+        height="400"
+        width="1000">
+      </iframe>
+    </div>
+  </section>
+  
+</main>
+
+<footer>
+  <p>Sky Li &copy; 2022. No template used in creating this site!</p>
+</footer>
+</body>
+</html>

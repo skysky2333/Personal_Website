@@ -9,70 +9,77 @@
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <img src="img/logo.jpg" alt="logo" width="170" height="100">
-    </a>
-    <img src="img/banner_logo.jpg" alt="banner logo" width="500" height="270">
-    
     <nav>
-      <ul>
-        <li><a href="background.html">Background</a></li>
+      
+      <a id ='logo' href="index.html">
+        Sky Li - Portfolio
+      </a>
+      
+      <label class="menu" for="toggle">   
+        <a> MENU </a>
+      </label>
+      <input type="checkbox" id="toggle">
+      
+      
+      <ul class="nav">
+        <li class="current"><a href="index.html">Home</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="cinematography.html">Cinematography</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="background.html">About</a></li>
+        <!--
+          <li><a href="gallery.html">Gallery</a></li>
+        -->
       </ul>
     </nav>
   </header>
   
-  <main>
-    <section>
-      <h1>Welcome to Sky Li's portfolio website</h1>
-      <p>Hi! This is Yuxiang (Sky) Li. A UCSD undergrade student 
-        majors in Neuobiology and Computer science. My research focuses on microbiome & human interaction,
-        and particularly in relationship to head and heck cancer. As a hobby I shoot short files and takes
-        photos for others.</p>
-        <aside>
-          <figure>
-            <img src="img/headshot.jpg" alt="a portrait of myself" width="300" height="300" >
-            <figcaption>A portrait of myself</figcaption>
-          </figure>
-        </aside>
-      </section>
-      <section>
-        <h2>
-          Recent Projects:
-        </h2>
-        <pre>"If an IT project works the first time, it was in your nightly dreams. Time to wake up and get to work.”
-                                                                  ----Cornelius Fitchner
-        </pre>
-        <h3>
-          IBD Gut Microbiome
-        </h3>
-        <img src="img/gever_2012_b.png" alt="ibd img">
-        <p>
-          How gut micriobiome interaction linked to IBD diagonsis and prognosis. Is it possible
-          to predict with ML?
-        </p>
-        <h3>
-          Covid-19 disparity
-        </h3>
-        <img src="img/proxy-image.png" alt="covid img" width="400" height="250">
-        <p>
-          How does racial and economic status impact Covid outcomes?
-        </p>
-        <h3>
-         Lure 
-        </h3>
-        <img src="img/lure.png" alt="covid img" width="400" height="300">
-        <p>
-          A short film about a lost girl. Lighting designed by me.
-        </p>
-      </section>
-    </main>
+  <section class="landing">
+    <div class="content wipe_in space">
+      <h1 id="landing_title">Welcome to Sky Li's portfolio website</h1>
+      <p id="quote">"If an IT project works the first time, it was in your nightly dreams. Time to wake up and get to work.”
+        ----Cornelius Fitchner
+      </p>
+    </div>
+  </section>
+  
+  <main class="fade_in space">
     
-    <footer>
-      <hr/>
-      <p>Sky Li &copy; 2022</p>
-    </footer>
-  </body>
-  </html>
+    <h2>
+      Recent Projects
+    </h2>
+    <section class="hori_3 projects">
+      <div>
+        <img src="img/gever_2012_b.png" alt="ibd img">
+        <h3>
+          IBD Microbiome
+        </h3>
+        <p>
+          How gut micriobiome interaction linked to IBD diagonsis?
+        </p>
+      </div>
+      <div>
+        <img src="img/proxy-image.png" alt="covid img" >
+        <h3>
+          Covid-19 Disparity
+        </h3>
+        <p>
+          Racial & economical status' impact on Covid outcomes.
+        </p>
+      </div>
+      <div>
+        <img src="img/lure.jpg" alt="lure img">
+        <h3>
+          "Lure"
+        </h3>
+        <p>
+          A short film about a lost girl. Lighting design by me.
+        </p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Sky Li &copy; 2022. No template used in creating this site!</p>
+  </footer>
+</body>
+</html>
