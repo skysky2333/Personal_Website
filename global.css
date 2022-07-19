@@ -99,7 +99,7 @@ b {
   grid-gap: 10%;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  margin: 10%;
+  margin: 15%;
 }
 
 .hori_3 div {
@@ -115,7 +115,7 @@ b {
   grid-gap: 10%;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  margin: 10%;
+  margin: 15%;
 }
 
 .hori_2, figcaption div {
@@ -242,6 +242,7 @@ nav a {
   }
   #toggle:checked ~ .nav {  
     display: block;
+    z-index: 11;
   }
 }
 
@@ -279,7 +280,7 @@ nav a {
   right: 0;
   left: 0;
   text-align: center;
-  transition: all 1000ms;
+  transition: all 1s;
 }
 
 .content #landing_title {
