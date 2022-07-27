@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Dialog</title>
+  <script type="module" src="purify.js"></script>
+  <script defer type="module" src="customdialog.js"></script>
+</head>
+<body>
+  <p style="font-size: 2rem;">Custom Dialog</p>
+
+  <dialog id="d_alt">
+    <form method="dialog">
+    <p>Alert Pressed!</p>
+    <button>Ok</button>
+    </form>
+  </dialog>
+
+  <dialog id="d_cfm">
+    <form method="dialog">
+    <p>Do you confirm?</p>
+    <button id="cfm_cancel">Cancel</button>
+    <button id="cfm_confirm">Confirm</button>
+    </form>
+  </dialog>
+
+  <dialog id="d_ppt">
+    <form method="dialog">
+    <p>What is your name?</p>
+    <input id="ppt_input" type="text"/>
+    <br/>
+    <button id="ppt_cancel">Cancel</button>
+    <button id="ppt_confirm">Confirm</button>
+    </form>
+  </dialog>
+  
+  <input id="alt" type="button" value="Alert"> 
+  <input id="cfm" type="button" value="Confirm"> 
+  <input id="ppt" type="button" value="Prompt"> 
+  <hr />
+  <output style="font-size: 2rem;"></output>
+
+</body>
+
+  </html>

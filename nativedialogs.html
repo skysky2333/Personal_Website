@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Dialog</title>
+  <script type="module" src="purify.js"></script>
+</head>
+<body>
+  <p style="font-size: 2rem;">Simple Dialog</p>
+  <form>
+    <input id="alt" type="button" value="Alert"> 
+    <input id="cfm" type="button" value="Confirm"> 
+    <input id="ppt" type="button" value="Prompt"> 
+    <input id="sppt" type="button" value="Safer Prompt">
+  </form>
+  <hr />
+  <output style="font-size: 2rem;"></output>
+  
+  <script type="module">
+    
+    //helper function to sanitize input
+    let sanitize_input = (normal, dirty) => `${normal[0]}${DOMPurify.sanitize(dirty)}`;
+    
+    function buttom_action(){
+      document.querySelector('#alt').addEventListener('click',function(){
+        alert('Alert Pressed!');
+      })
+      
+      document.querySelector('#cfm').addEventListener('click',function(){
+        let user_confirm = confirm('Do you want to comfirm');
+        document.querySelector('output').innerHTML = `The value returned by the confirm method is : ${user_confirm}`;
+      })
+      
+      document.querySelector('#ppt').addEventListener('click',function(){
+        let usr_name = prompt('What is your name?');
+        if (usr_name){
+          document.querySelector('output').innerHTML = `Prompted result: ${usr_name}`;
+        }
+        else{
+          document.querySelector('output').innerHTML = `User didn’t enter anything`;
+        }
+      })
+      
+      document.querySelector('#sppt').addEventListener('click',function(){
+        let usr_name = prompt('What is your name?');
+        if (usr_name){
+          document.querySelector('output').innerHTML = sanitize_input`Prompted result: ${usr_name}`;
+        }
+        else{
+          document.querySelector('output').innerHTML = `User didn’t enter anything`;
+        }
+      })
+    }
+    
+    //only load function after initial loading
+    window.addEventListener('DOMContentLoaded', buttom_action)
+  </script>
+  
+</body>
+
+<!--
+  test string for dirty usser input
+  <b onmouseover="alert('pwuned')"> Roll me <b/>
+  -->
+  </html>

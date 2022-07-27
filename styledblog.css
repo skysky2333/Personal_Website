@@ -1,0 +1,293 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* set some basics*/
+
+html {
+  background: #e9e9eb;
+  font-family: 'Merriweather', sans-serif;
+}
+
+.space {
+  padding: 5%;
+  margin: 5%;
+}
+
+img {
+  box-shadow: 0px 1.5rem 2rem rgba( 0, 0, 0, 0.2 );
+}
+
+.shadow {
+  box-shadow: 0px 1.5rem 2rem rgba( 0, 0, 0, 0.2 );
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+  font-size: 6vw;
+  font-weight: bold;
+  margin-top: 5vh;
+}
+
+h2 {
+  text-align: center;
+  color: #000000;
+  font-size:5vw;
+  font-weight: bold;
+  margin: 2%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  
+}
+
+h3 {
+  text-align: center;
+  color: #000000;
+  font-size: 3.5vw;
+  font-weight: bold;
+  margin: 2%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+p {
+  font-size: 3vw;
+}
+
+li {
+  font-size: 3vw;
+}
+summary {
+  font-size: 4vw;
+}
+b {
+  font-size: 4vw;
+}
+
+@media screen and (min-width: 1000px) {
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: 2rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+  li{
+    font-size: 1.3rem;
+  }
+  summary{
+    font-size: 2rem;
+  }
+  b{
+    font-size: 1.7rem;
+  }
+}
+
+header{
+  margin: 0;
+  padding: 0;
+}
+
+footer p{
+  text-align: center;
+  padding: 2%;
+  background-color: rgb(104, 145, 168);
+  color: #ffffff;
+}
+
+.dark_bg {
+  background: rgb(112, 161, 158);
+  color: #f4f4f4;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.dark_bg *{
+  color: #f4f4f4;
+}
+
+
+.conenct_border {
+  border: 7vw rgb(162, 203, 226) solid;
+  border-top: 20vh rgb(162, 203, 226) solid;
+  border-bottom: 20vh rgb(162, 203, 226) solid;
+
+}
+
+
+.hori_3 {
+  display: grid;
+  grid-gap: 2%;
+  grid-template-columns: 2fr 1fr 10fr 0.5fr;
+  align-items: center;
+  padding: 2% 5%;
+  justify-content: space-evenly;
+}
+
+.hori_3 * {
+  text-align: center;
+  text-align: justify;
+}
+
+
+
+@media screen and (max-width: 1000px)
+{  
+  .hori_3 {
+    grid-template-columns: 1fr;
+    height: fit-content;
+    overflow: auto;
+  }
+}
+
+.fade_in {
+  animation: fade_in ease 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+form {
+  max-width: 1000px;
+  text-align: center;
+  margin: 30px auto;
+}
+
+input, textarea, select {
+  border:0;
+  padding: 1em;
+  width: 80%;
+  margin-top: 1em;
+  resize: none;
+}
+
+textarea {
+  height: 10rem;
+}
+
+#sb {
+  color: #f8f8f8; 
+  background: rgb(104, 145, 168);
+  cursor: pointer;
+  border:0;
+  width: 80%;
+  margin: 2em;
+  padding: 1em;
+}
+
+output {
+  color: red;
+}
+
+
+
+/* navigation bar */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: rgb(104, 145, 168);
+}
+
+
+nav a {
+  color: #ffffff;
+}
+#logo {
+  font-size: 1em;
+  margin-left: 1em;
+}
+
+.nav {
+  display: flex;
+  gap: 1em;
+  font-size: 1em;
+}
+
+.nav li:hover {
+  background-color: rgb(236, 147, 147);
+  border-radius: 1em;
+  transition: 0.5s ease;
+}
+
+.nav li.current {
+  background-color: rgb(190, 196, 118);
+  border-radius: 1em;
+}
+
+.nav li {
+  padding: 0.2em 1em;
+  flex: 1;
+}
+
+
+/* responsive burger */
+.menu {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+#toggle {   
+  display: none;
+}
+
+@media screen and (max-width: 1000px)
+{    
+  .menu {
+    display: block;
+  }
+  
+  .nav {  
+    display: none;  
+    position: absolute;
+    top: 3.3rem;
+    right: 0; 
+    background-color: #a3c0e6d0;
+    text-align: center;
+    border-radius: 1em;
+  }
+  #toggle:checked ~ .nav {  
+    display: block;
+    z-index: 11;
+  }
+}
+
+
+#ins {
+  position: fixed ;
+  z-index: 999;
+  bottom: 20vh;
+  right: 0;
+  transform: scale(.7);
+  transform-origin: right;
+}

@@ -264,7 +264,7 @@ nav a {
   display: none;
 }
 
-@media screen and (max-width: 800px)
+@media screen and (max-width: 1000px)
 {    
   .menu {
     display: block;
@@ -519,7 +519,7 @@ textarea {
   background: rgb(104, 145, 168);
   cursor: pointer;
   border:0;
-  width: 85%;
+  width: 80%;
   margin: 2em;
   padding: 1em;
 }
