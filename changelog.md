@@ -1,4 +1,5 @@
 Changes made to the site:
+0. Installed font awsome for icon support.
 1. Add a arrow instruction in the home page, so that people will be lead to scrol down the page for more content. It is nessecary because the front image takes up the whole page and people will not realize that it is scrolable and there are more content.
 2. Add a comment board page using the part 4 of this assignment (blog post) so that people can leave comments and interact with each other.
 3. Add a hamberger icon to accompoany the 'MEMU' buttom for mobile viewing.
