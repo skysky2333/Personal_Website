@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Method Test</title>
+  <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="styledblog.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      
+      <a id ='logo' href="index.html">
+        Sky Li - Portfolio
+      </a>
+      
+      <label class="menu" for="toggle">
+        <a> MENU </a>
+      </label>
+      <input type="checkbox" id="toggle">
+      
+      
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="cinematography.html">Cinematography</a></li>
+        <li><a href="background.html">About</a></li>
+        <li><a href="styledcrud.html">Comments</a></li>
+        <li class="current"><a href="methodTest.html">API</a></li>
+        <!--
+          <li><a href="gallery.html">Gallery</a></li>
+        -->
+      </ul>
+    </nav>
+  </header>
+  
+  <h1>API Method Test</h1>
+  <form id="request_form">
+    <h2>Upload an Article:</h2>
+    <input type="number" name="article_id" id="article_id" placeholder="Article ID"/>
+    <input type="text" name="article_name" id="article_name" placeholder="Article Name"/>
+    <textarea name="article_body" id="article_body" placeholder="Article Body"></textarea>
+    <input type="datetime" name="date_time" id="date_time" style="display: none;"></input>
+    <button type="button" class="sb" id="postBtn">Post Buttom</button>
+    <button type="button" class="sb" id="getBtn">Get Buttom</button>
+    <button type="button" class="sb" id="putBtn">Put Buttom</button>
+    <button type="button" class="sb" id="deleteBtn">Delete Buttom</button>
+    <br />
+  </form>
+  <h2>Output Recieved:</h2>
+  <output id="response"></output>
+  
+  
+  <footer>
+    <p>Sky Li &copy; 2022. No template used in creating this site!</p>
+  </footer>
+  
+  
+  
+  <script type="module">
+    window.addEventListener('DOMContentLoaded',init);
+    function init() {      
+      let response = document.getElementById('response');
+      document.getElementById('postBtn').addEventListener('click', () => {
+        request('POST', 'https://www.httpbin.org/post')
+      });
+      document.getElementById('getBtn').addEventListener('click', () => {
+        request('GET', 'https://www.httpbin.org/get')
+      });
+      document.getElementById('putBtn').addEventListener('click', () => {
+        request('PUT', 'https://www.httpbin.org/put')
+      });
+      document.getElementById('deleteBtn').addEventListener('click', () => {
+        request('DELETE', 'https://www.httpbin.org/delete')
+      });
+    }
+    
+    function request(method, endpoint) {
+      response.innerHTML='';
+      document.getElementById('date_time').value=`${new Date()}`; 
+      let xhr = new XMLHttpRequest();
+      let form = document.getElementById('request_form');
+      let payload = new FormData(form);
+      xhr.open(method,endpoint, true);
+      xhr.setRequestHeader('X-Powered-By','Cold Tea');
+      xhr.onload = function () {
+        let back = JSON.parse(xhr.responseText);
+        for(let i in back){
+          response.insertAdjacentHTML('beforeend',`<details><summary>${i}</summary>${JSON.stringify(back[i])}</details>`);
+        } 
+      }      
+      xhr.send(payload);
+      
+    }
+    
+  </script>
+  
+  
+</body>
+
+</html>

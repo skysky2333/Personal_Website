@@ -72,9 +72,7 @@ p {
 li {
   font-size: 3vw;
 }
-summary {
-  font-size: 4vw;
-}
+
 b {
   font-size: 4vw;
 }
@@ -94,9 +92,6 @@ b {
   }
   li{
     font-size: 1.3rem;
-  }
-  summary{
-    font-size: 2rem;
   }
   b{
     font-size: 1.7rem;
@@ -193,19 +188,32 @@ textarea {
   height: 10rem;
 }
 
-#sb {
+.sb {
   color: #f8f8f8; 
   background: rgb(104, 145, 168);
   cursor: pointer;
   border:0;
   width: 80%;
-  margin: 2em;
+  margin: 1em;
   padding: 1em;
 }
 
 output {
   color: red;
 }
+
+details {
+  color: #e9e9eb;
+  background: rgb(67, 149, 155);
+  font-size: large;
+  margin: 3% 10%;
+  padding: 1rem;
+  flex-wrap: wrap;
+  text-align: center;
+  text-justify:inter-cluster;
+}
+
+
 
 
 
