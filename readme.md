@@ -1,7 +1,6 @@
-Name: Sky Li
-UID: A16335987
-URL: https://stupendous-gelato-2e81ed.netlify.app/
+# Portfolio Website
+Visit in here: https://skysky2333.github.io/Personal_Website/
 
-
-Note:
-Gradescope bugged out when trying to upload the fontawsome folder (because too many small files) which is necessary for icon support. So the gradescope submission version does not have icons. The real final result can be checked out by the link above.
+## Note
+This is a class project. Everything is hand coded / no template used.
+Information only up till July 2022.
